@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane fx:id="tpPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="639.0" styleClass="corpo" stylesheets="@../css/style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Historico">
+  <tabs>
+    <Tab fx:id="tpCompra" text="Compras">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tbCompras" layoutX="136.0" layoutY="158.0" onMouseClicked="#verificaSelecao" prefHeight="212.0" prefWidth="607.0" styleClass="corpo" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="48.0" />
+                  <Pane layoutX="166.0" layoutY="260.0" prefHeight="32.0" prefWidth="607.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+                     <children>
+                        <Button fx:id="btDetalhesCompra" layoutX="519.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#visualizarCompra" styleClass="btn" text="Detalhes" />
+                        <Button fx:id="btVoltarCompras" layoutY="4.0" mnemonicParsing="false" onAction="#botaoVoltar" styleClass="btn-sair" text="Voltar" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="297.0" layoutY="18.0" text="Compras finalizadas em:" AnchorPane.rightAnchor="200.0" />
+                  <ComboBox fx:id="cbFiltroCompra" layoutX="449.0" layoutY="14.0" onHidden="#checaFiltroCompra" prefHeight="25.0" prefWidth="172.0" />
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+    <Tab fx:id="tpVenda" text="Vendas">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tbVendas" layoutX="56.0" layoutY="58.0" onMouseClicked="#verificaSelecao" prefHeight="209.0" prefWidth="607.0" styleClass="corpo" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="48.0" />
+                  <Pane layoutX="172.0" layoutY="290.0" prefHeight="32.0" prefWidth="607.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+                     <children>
+                        <Button fx:id="btDetalhesVenda" layoutX="519.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#visualizarVenda" styleClass="btn" text="Detalhes" />
+                        <Button fx:id="btVoltarVendas" layoutY="4.0" mnemonicParsing="false" onAction="#botaoVoltar" styleClass="btn" text="Voltar" />
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Pane>
+                  <Label layoutX="311.0" layoutY="18.0" text="Vendas realizadas em:" AnchorPane.rightAnchor="200.0" />
+                  <ComboBox fx:id="cbFiltro" layoutX="449.0" layoutY="14.0" onHidden="#checaFiltroVenda" prefHeight="25.0" prefWidth="172.0" />
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+  </tabs>
+   <effect>
+      <Blend />
+   </effect>
+</TabPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="433.0" prefWidth="437.0" styleClass="corpo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.GerenciarFornecedor">
+   <children>
+      <AnchorPane layoutY="8.0" prefHeight="441.0" prefWidth="437.0">
+         <children>
+            <TextField fx:id="txNome" layoutX="14.0" layoutY="16.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="299.0" styleClass="text-login" />
+            <TextField fx:id="txCnpj" layoutX="14.0" layoutY="75.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="299.0" styleClass="text-login" />
+            <TextField fx:id="txTel1" layoutX="14.0" layoutY="136.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txId" editable="false" layoutX="337.0" layoutY="16.0" prefHeight="26.0" prefWidth="66.0" styleClass="text-login" />
+            <TextField fx:id="txTel2" layoutX="232.0" layoutY="136.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txCep" layoutX="14.0" layoutY="196.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txNum" layoutX="232.0" layoutY="196.0" styleClass="text-login" />
+            <TextField fx:id="txRua" layoutX="14.0" layoutY="261.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txComp" layoutX="232.0" layoutY="261.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txBairro" layoutX="14.0" layoutY="324.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txCidade" layoutX="232.0" layoutY="324.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <TextField fx:id="txEstado" layoutX="15.0" layoutY="391.0" onKeyReleased="#ativarBotaoSalvar" styleClass="text-login" />
+            <Label layoutX="15.0" text="Nome:" />
+            <Label layoutX="339.0" text="ID:" />
+            <Label layoutX="16.0" layoutY="59.0" text="CNPJ:" />
+            <Label layoutX="15.0" layoutY="120.0" text="Tel 1:" />
+            <Label layoutX="232.0" layoutY="120.0" text="Tel 2:" />
+            <Label layoutX="16.0" layoutY="180.0" text="CEP:" />
+            <Label layoutX="232.0" layoutY="180.0" text="Num:" />
+            <Label layoutX="16.0" layoutY="245.0" text="Rua:" />
+            <Label layoutX="232.0" layoutY="245.0" text="Complemento:" />
+            <Label layoutX="19.0" layoutY="308.0" text="Bairro:" />
+            <Label layoutX="234.0" layoutY="308.0" text="Cidade:" />
+            <Label layoutX="16.0" layoutY="375.0" text="Estado:" />
+            <AnchorPane layoutX="242.0" layoutY="376.0" prefHeight="57.0" prefWidth="171.0">
+               <children>
+                  <Button fx:id="btSalvar" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#botaoSalvar" styleClass="btn" text="Salvar" />
+                  <Button fx:id="btCancelar" layoutX="95.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#botaoCancelar" styleClass="btn" text="Cancelar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

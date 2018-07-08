@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="759.0" styleClass="corpo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.NovaCompra">
+   <children>
+      <Pane layoutX="19.0" layoutY="174.0" prefHeight="286.0" prefWidth="306.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="174.0">
+         <children>
+            <TextField fx:id="txNome" editable="false" layoutX="6.0" layoutY="23.0" onInputMethodTextChanged="#atvBotaoAdd" onKeyReleased="#atvBotaoAdd" prefHeight="26.0" prefWidth="200.0" styleClass="text-login" />
+            <Label fx:id="lbNome" layoutX="6.0" layoutY="6.0" text="Nome" />
+            <TextField fx:id="txId" editable="false" layoutX="238.0" layoutY="23.0" onInputMethodTextChanged="#atvBotaoAdd" onKeyReleased="#atvBotaoAdd" prefHeight="26.0" prefWidth="52.0" styleClass="text-login" />
+            <Label layoutX="240.0" layoutY="6.0" text="ID" />
+            <TextField fx:id="txQtdEstoque" editable="false" layoutX="6.0" layoutY="70.0" onInputMethodTextChanged="#atvBotaoAdd" onKeyReleased="#atvBotaoAdd" prefHeight="26.0" prefWidth="112.0" styleClass="text-login" />
+            <Label layoutX="6.0" layoutY="52.0" text="Qtd. Estoque" />
+            <Label layoutX="146.0" layoutY="52.0" text="Preço Unitário" />
+            <TextField fx:id="txPrecoUn" editable="false" layoutX="146.0" layoutY="70.0" onInputMethodTextChanged="#atvBotaoAdd" onKeyReleased="#atvBotaoAdd" prefHeight="26.0" prefWidth="146.0" styleClass="text-login" />
+            <TextField fx:id="txQtdCompra" layoutX="6.0" layoutY="116.0" onInputMethodTextChanged="#atvBotaoAdd" onKeyReleased="#atvBotaoAdd" prefHeight="26.0" prefWidth="112.0" promptText="Inserir quant." styleClass="text-login" />
+            <TextField fx:id="txPrecoCompra" layoutX="145.0" layoutY="116.0" onInputMethodTextChanged="#atvBotaoAdd" onKeyReleased="#atvBotaoAdd" prefHeight="26.0" prefWidth="146.0" promptText="Insira o preço" styleClass="text-login" />
+            <Label layoutX="6.0" layoutY="99.0" text="Qtd. a Comprar" />
+            <Label layoutX="146.0" layoutY="99.0" text="Preço da Compra" />
+            <Button fx:id="btAdicionar" layoutX="211.0" layoutY="154.0" mnemonicParsing="false" onAction="#addProds" styleClass="btn" text="Adicionar" />
+            <Button fx:id="btLimparText" layoutX="134.0" layoutY="154.0" mnemonicParsing="false" onAction="#clearFields" styleClass="btn-yellow" text="Limpar" />
+            <DatePicker fx:id="dtEntrega" editable="false" layoutX="6.0" layoutY="206.0" onHiding="#atvBotaoAdd" promptText="Data da entrega" showWeekNumbers="true" styleClass="text-login" />
+            <Label layoutX="6.0" layoutY="187.0" text="Data estimada de entrega" />
+            <TextField fx:id="txPrecoTotal" layoutX="6.0" layoutY="255.0" prefHeight="26.0" prefWidth="176.0" styleClass="text-login" />
+            <Label layoutX="6.0" layoutY="239.0" text="Valor total" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </Pane>
+      <Pane layoutX="345.0" layoutY="70.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="345.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <TableView fx:id="tbProdutos" layoutY="26.0" prefHeight="385.0" prefWidth="398.0" styleClass="corpo" />
+            <Label fx:id="lbCarrinho" layoutY="6.0" text="Lista de Pedido" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </Pane>
+      <Pane layoutX="16.0" layoutY="455.0" prefHeight="52.0" prefWidth="306.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0">
+         <children>
+            <Label fx:id="lbVendedor" layoutX="6.0" layoutY="8.0" text="Usuario" />
+            <TextField fx:id="txVendedor" editable="false" layoutX="6.0" layoutY="25.0" prefHeight="25.0" prefWidth="297.0" styleClass="text-login" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </Pane>
+      <Pane layoutX="345.0" layoutY="490.0" prefHeight="25.0" prefWidth="398.0" AnchorPane.bottomAnchor="16.0">
+         <children>
+            <Button fx:id="btFinalizar" layoutX="252.0" mnemonicParsing="false" onMouseClicked="#comprar" prefHeight="28.0" prefWidth="146.0" styleClass="btn" text="Registrar Pedido" />
+            <Button fx:id="btLimparVenda" layoutX="78.0" mnemonicParsing="false" onMouseClicked="#clearTable" styleClass="btn-yellow" text="Limpar" />
+            <Button fx:id="btRemover" layoutX="155.0" mnemonicParsing="false" onMouseClicked="#removeItem" styleClass="btn-sair" text="Remover" />
+            <Button fx:id="btVoltar" mnemonicParsing="false" onMouseClicked="#botaoVoltar" styleClass="btn-sair" text="Voltar" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </Pane>
+      <ListView fx:id="lvProdutos" layoutX="26.0" layoutY="68.0" onContextMenuRequested="#fillFields" onInputMethodTextChanged="#fillFields" onMouseClicked="#fillFields" prefHeight="107.0" prefWidth="297.0" styleClass="corpo" />
+      <Pane layoutX="21.0" layoutY="14.0" prefHeight="37.0" prefWidth="720.0">
+         <children>
+            <Label fx:id="lbPesquisar" layoutX="1.0" layoutY="11.0" text="Pesquisar produto:" />
+            <TextField fx:id="txPesquisar" layoutX="144.0" layoutY="6.0" onInputMethodTextChanged="#autoComplete" onKeyPressed="#autoComplete" prefHeight="26.0" prefWidth="577.0" promptText="Digite o Nome ou ID do produto..." styleClass="text-login" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

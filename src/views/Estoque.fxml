@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="420.0" prefWidth="602.0" styleClass="corpo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Estoque">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="93.0" prefHeight="315.0" prefWidth="578.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="93.0">
+         <children>
+            <TableView fx:id="tbView" onMouseClicked="#verificaSelecao" prefHeight="310.0" prefWidth="578.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="29.0" prefHeight="64.0" prefWidth="574.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <RadioButton fx:id="rdId" layoutX="379.0" layoutY="11.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="75.0" selected="true" text="ID" AnchorPane.rightAnchor="120.0">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rdNome" layoutX="379.0" layoutY="36.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="75.0" text="Nome" toggleGroup="$group" AnchorPane.rightAnchor="120.0" />
+            <TextField fx:id="txPesquisar" layoutX="76.0" layoutY="20.0" onKeyReleased="#pesquisarProduto" prefHeight="26.0" prefWidth="291.0" styleClass="text-login" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="208.0" />
+            <Label fx:id="lbPesquisar" layoutX="-2.0" layoutY="25.0" text="Pesquisar:" AnchorPane.leftAnchor="-2.0" />
+            <ComboBox fx:id="cbCat" layoutX="456.0" layoutY="29.0" onHidden="#pesquisarCategoria" prefHeight="26.0" prefWidth="120.0" styleClass="btn" AnchorPane.rightAnchor="0.0" />
+            <Label fx:id="lbCategorias" layoutX="479.0" layoutY="11.0" text="Categorias:" AnchorPane.rightAnchor="22.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" prefHeight="38.0" prefWidth="576.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btVoltar" layoutX="43.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#botaoVoltar" styleClass="btn" text="Voltar" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btAdd" layoutX="114.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#botaoAddProduto" styleClass="btn" text="Adicionar">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btEdit" layoutX="208.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#botaoEditProduto" styleClass="btn" text="Editar">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btRemove" layoutX="279.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#botaoRemoveProduto" styleClass="btn" text="Remover">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btView" layoutX="370.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#botaoViewProduto" styleClass="btn" text="Visualizar" />
+            <Button fx:id="btCategorias" layoutX="465.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#botaoCategorias" styleClass="btn" text="Categorias" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

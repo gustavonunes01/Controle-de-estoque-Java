@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="313.0" prefWidth="459.0" styleClass="corpo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.GerenciarProduto">
+   <children>
+      <TextField fx:id="txNome" layoutX="16.0" layoutY="32.0" onKeyPressed="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="308.0" promptText="Insira o nome" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="27.0" layoutY="64.0" text="Nome" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0" />
+      <Label layoutX="16.0" layoutY="62.0" text="Preço" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="142.0" layoutY="62.0" text="Quantidade" AnchorPane.leftAnchor="142.0" />
+      <Label layoutX="260.0" layoutY="62.0" text="Unidade" />
+      <Label layoutX="343.0" layoutY="62.0" prefHeight="16.0" prefWidth="91.0" text="Quant. Min." />
+      <Label layoutX="16.0" layoutY="117.0" text="Fornecedor:" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="312.0" layoutY="117.0" text="Categoria:" />
+      <TextField fx:id="txPreco" layoutX="16.0" layoutY="78.0" onInputMethodTextChanged="#txtChanged" onKeyPressed="#ativarBotaoSalvar" onMouseExited="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="114.0" promptText="Insira o preço" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txQtd" layoutX="142.0" layoutY="78.0" onKeyPressed="#ativarBotaoSalvar" onMouseExited="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="101.0" promptText="Insira a qu.." styleClass="text-login" AnchorPane.leftAnchor="142.0" />
+      <TextField fx:id="txEstoqueMin" layoutX="341.0" layoutY="78.0" onKeyPressed="#ativarBotaoSalvar" onMouseExited="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="101.0" promptText="Insira a qu.." styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <ComboBox fx:id="cbCat" layoutX="271.0" layoutY="136.0" onHidden="#ativarBotaoSalvar" onMouseClicked="#ativarBotaoSalvar" prefWidth="200.0" styleClass="btn" AnchorPane.rightAnchor="16.0" />
+      <ComboBox fx:id="cbForn" layoutX="14.0" layoutY="136.0" onHidden="#ativarBotaoSalvar" onMouseClicked="#ativarBotaoSalvar" prefWidth="200.0" styleClass="btn" AnchorPane.leftAnchor="16.0" />
+      <Button fx:id="btSalvar" layoutX="347.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#btSalvar_Click" prefHeight="26.0" prefWidth="91.0" styleClass="btn" text="Salvar" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" />
+      <Button fx:id="btCancelar" layoutX="248.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#btCancel_Click" prefHeight="26.0" prefWidth="91.0" styleClass="btn-sair" text="Voltar" AnchorPane.bottomAnchor="16.0" />
+      <ComboBox fx:id="cbUn" layoutX="259.0" layoutY="78.0" onHidden="#ativarBotaoSalvar" onMouseClicked="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="68.0" styleClass="btn" />
+      <TextField fx:id="txId" alignment="CENTER" editable="false" layoutX="342.0" layoutY="32.0" prefHeight="26.0" prefWidth="101.0" styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="343.0" layoutY="16.0" text="ID" AnchorPane.topAnchor="16.0" />
+      <ImageView fitHeight="127.0" fitWidth="131.0" layoutX="16.0" layoutY="172.0" pickOnBounds="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0">
+         <image>
+            <Image url="@../../../../carlos/Imagens/Dota_2_sign.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

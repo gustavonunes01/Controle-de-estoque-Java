@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="503.0" styleClass="corpo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.GerenciarUsuario">
+   <children>
+      <TextField fx:id="txNome" layoutX="16.0" layoutY="32.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="340.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txId" alignment="CENTER" editable="false" layoutX="382.0" layoutY="32.0" prefHeight="26.0" prefWidth="105.0" styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="8.0" layoutY="35.0" text="Nome" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0" />
+      <Label layoutX="383.0" layoutY="16.0" text="ID" AnchorPane.topAnchor="16.0" />
+      <Label layoutX="16.0" layoutY="62.0" text="CPF" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txCpf" layoutX="16.0" layoutY="78.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="167.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <RadioButton fx:id="rdM" layoutX="367.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#ativarBotaoSalvar" selected="true" text="Masc." AnchorPane.rightAnchor="76.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="Sexo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdF" layoutX="438.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#ativarBotaoSalvar" text="Fem." toggleGroup="$Sexo" AnchorPane.rightAnchor="16.0" />
+      <DatePicker fx:id="dtDataNasc" editable="false" layoutX="189.0" layoutY="78.0" onHiding="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="167.0" styleClass="text-login" AnchorPane.leftAnchor="189.0" />
+      <Label layoutX="189.0" layoutY="62.0" text="Data de Nascimento" AnchorPane.leftAnchor="189.0" />
+      <Label layoutX="14.0" layoutY="112.0" text="Telefone 1" AnchorPane.leftAnchor="16.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="189.0" layoutY="112.0" text="Telefone 2" />
+      <TextField fx:id="txTel1" layoutX="16.0" layoutY="128.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="167.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txTel2" layoutX="189.0" layoutY="128.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="167.0" styleClass="text-login" AnchorPane.rightAnchor="142.0" />
+      <TextField fx:id="txCep" layoutX="363.0" layoutY="128.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="118.0" styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <TextField fx:id="txRua" layoutX="16.0" layoutY="176.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="340.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txBairro" layoutX="16.0" layoutY="266.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="340.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txCidade" layoutX="16.0" layoutY="222.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="340.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="txNum" layoutX="369.0" layoutY="176.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="118.0" styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <TextField fx:id="txComp" layoutX="369.0" layoutY="266.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="118.0" styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <TextField fx:id="txEstado" layoutX="369.0" layoutY="222.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="118.0" styleClass="text-login" AnchorPane.rightAnchor="16.0" />
+      <Label layoutX="414.0" layoutY="62.0" text="Sexo" />
+      <Label layoutX="370.0" layoutY="112.0" text="CEP" />
+      <Label alignment="CENTER_RIGHT" layoutX="371.0" layoutY="161.0" text="Número" AnchorPane.rightAnchor="74.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="16.0" layoutY="161.0" text="Rua" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="16.0" layoutY="251.0" text="Bairro" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="16.0" layoutY="207.0" text="Cidade" AnchorPane.leftAnchor="16.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="369.0" layoutY="251.0" text="Complemento" AnchorPane.rightAnchor="32.0" />
+      <Label layoutX="368.0" layoutY="207.0" text="Estado" AnchorPane.leftAnchor="368.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="305.0" text="Login" AnchorPane.leftAnchor="16.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="268.0" layoutY="305.0" text="Senha" />
+      <TextField fx:id="txLogin" layoutX="16.0" layoutY="321.0" onKeyReleased="#verificaLogin" prefHeight="26.0" prefWidth="225.0" styleClass="text-login" AnchorPane.leftAnchor="16.0" />
+      <PasswordField fx:id="txSenha" layoutX="334.0" layoutY="321.0" onKeyReleased="#ativarBotaoSalvar" prefHeight="26.0" prefWidth="225.0" styleClass="text-login" AnchorPane.rightAnchor="11.0" />
+      <Label fx:id="lbUsuario" layoutX="322.0" layoutY="368.0" prefHeight="26.0" prefWidth="153.0" textFill="RED" AnchorPane.rightAnchor="16.0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="btSalvar" layoutX="402.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#botaoSalvar" prefHeight="16.0" prefWidth="96.0" styleClass="btn" text="Salvar" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" />
+      <Button fx:id="btCancelar" layoutX="146.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#botaoCancelar" prefHeight="16.0" prefWidth="96.0" styleClass="btn-sair" text="Voltar" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+      <Label layoutX="20.0" layoutY="353.0" text="Cargo" AnchorPane.leftAnchor="16.0" />
+      <ComboBox fx:id="cbCargo" layoutX="16.0" layoutY="368.0" onHiding="#ativarBotaoSalvar" prefHeight="25.0" prefWidth="225.0" styleClass="btn" AnchorPane.leftAnchor="16.0" />
+   </children>
+</AnchorPane>

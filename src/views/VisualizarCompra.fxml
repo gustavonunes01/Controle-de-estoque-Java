@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apPane" prefHeight="609.0" prefWidth="504.0" styleClass="corpo-yellow" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.VisualizarCompra">
+    <children>
+        <Label fx:id="lbCompraNum" layoutX="352.0" layoutY="12.0" prefHeight="25.0" prefWidth="22.0" text="ID" AnchorPane.topAnchor="12.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TableView fx:id="tbProdutos" layoutX="14.0" layoutY="131.0" prefHeight="428.0" prefWidth="484.0" styleClass="corpo-yellow" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" />
+        <AnchorPane layoutX="11.0" layoutY="558.0" prefHeight="25.0" prefWidth="472.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+            <children>
+                <Button fx:id="btVoltar" layoutY="2.0" mnemonicParsing="false" onAction="#botaoVoltar" onMouseClicked="#botaoVoltar" styleClass="btn-sair" text="Voltar" />
+                <Button fx:id="btVisualizar" layoutX="335.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#botaoFinalizar" prefHeight="26.0" prefWidth="149.0" styleClass="btn-yellow" text="Finalizar Pedido" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="17.0" layoutY="64.0" text="Usuário " AnchorPane.leftAnchor="17.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="18.0" layoutY="16.0" text="Realizada em" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="16.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txId" alignment="CENTER" editable="false" layoutX="433.53125" layoutY="35.0" prefHeight="25.0" prefWidth="149.0" styleClass="text-yellow" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="35.0" />
+        <TextField fx:id="txUsuario" editable="false" layoutX="16.0" layoutY="81.0" prefHeight="25.0" prefWidth="321.0" styleClass="text-yellow" AnchorPane.leftAnchor="16.0" />
+        <TextField fx:id="txDataPedido" editable="false" layoutX="17.0" layoutY="35.0" prefHeight="25.0" prefWidth="149.0" styleClass="text-yellow" />
+        <TextField fx:id="txDataPrevista" editable="false" layoutX="188.0" layoutY="35.0" prefHeight="25.0" prefWidth="148.0" styleClass="text-yellow" />
+        <Label layoutX="187.0" layoutY="16.0" text="Entrega prevista para" AnchorPane.topAnchor="16.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="17.0" layoutY="114.0" text="Produtos da compra" AnchorPane.leftAnchor="17.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="352.0" layoutY="64.0" text="Valor Total" AnchorPane.rightAnchor="89.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txTotal" alignment="CENTER" editable="false" layoutX="351.0" layoutY="81.0" prefHeight="25.0" prefWidth="149.0" styleClass="text-yellow" AnchorPane.rightAnchor="16.0" />
+    </children>
+</AnchorPane>
